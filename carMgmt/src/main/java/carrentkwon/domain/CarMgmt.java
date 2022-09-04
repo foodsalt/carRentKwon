@@ -45,88 +45,106 @@ public class CarMgmt {
     }
 
     public static void carStatusChange(Reserved reserved) {
-        /** Example 1:  new item 
+        /** Example 1:  new item */
         CarMgmt carMgmt = new CarMgmt();
         carMgmt.setCarId(reserved.getCarId());
+        carMgmt.setStatus(false);
         repository().save(carMgmt);
 
-        */
+        
 
-        /** Example 2:  finding and process */
+        /** Example 2:  finding and process 
         
         repository().findByCarId(reserved.getCarId()).forEach(carMgmt->{
             // carMgmt // do something
             CarMgmt carMgmt = new CarMgmt();
+            carMgmt.setCarId(reserved.getCarId());
             carMgmt.setStatus(false);
             System.out.println(
-                "\n\n##### listener CarStatusChange : " + carMgmt + "\n\n"
+                "\n\n##### listener CarStatusChange reserved : " + carMgmt + "\n\n"
             );
     
             repository().update(carMgmt);
-
-
          });
-       
+       */
 
     }
 
     public static void carStatusChange(Rented rented) {
-        /** Example 1:  new item 
+        /** Example 1:  new item */
         CarMgmt carMgmt = new CarMgmt();
+        carMgmt.setCarId(rented.getCarId());
+        carMgmt.setStatus(false);        
         repository().save(carMgmt);
 
-        */
-
-        /** Example 2:  finding and process
         
-        repository().findById(rented.get???()).ifPresent(carMgmt->{
-            
-            carMgmt // do something
-            repository().save(carMgmt);
 
-
+        /** Example 2:  finding and process 
+         *        
+        repository().findByCarId(rented.getCarId()).forEach(carMgmt->{
+            // carMgmt // do something
+            CarMgmt carMgmt = new CarMgmt();
+            carMgmt.setCarId(rented.getCarId());
+            carMgmt.setStatus(true);
+            System.out.println(
+                "\n\n##### listener CarStatusChange rented : " + carMgmt + "\n\n"
+            );
+    
+            repository().update(carMgmt);
          });
-        */
+         */
 
     }
 
     public static void carStatusChange(Returned returned) {
-        /** Example 1:  new item 
+        /** Example 1:  new item */
         CarMgmt carMgmt = new CarMgmt();
+        carMgmt.setCarId(returned.getCarId());
+        carMgmt.setStatus(false);        
         repository().save(carMgmt);
 
-        */
-
-        /** Example 2:  finding and process
         
-        repository().findById(returned.get???()).ifPresent(carMgmt->{
-            
-            carMgmt // do something
-            repository().save(carMgmt);
 
-
+        /** Example 2:  finding and process 
+        
+        repository().findByCarId(returned.getCarId()).forEach(carMgmt->{
+            // carMgmt // do something
+            CarMgmt carMgmt = new CarMgmt();
+            carMgmt.setCarId(returned.getCarId());
+            carMgmt.setStatus(true);
+            System.out.println(
+                "\n\n##### listener CarStatusChange returned : " + carMgmt + "\n\n"
+            );
+    
+            repository().update(carMgmt);
          });
-        */
+         */
 
     }
 
     public static void carStatusChange(ReserveCancelled reserveCancelled) {
-        /** Example 1:  new item 
+        /** Example 1:  new item */
         CarMgmt carMgmt = new CarMgmt();
+        carMgmt.setCarId(reserveCancelled.getCarId());
+        carMgmt.setStatus(false);        
         repository().save(carMgmt);
 
-        */
-
-        /** Example 2:  finding and process
         
-        repository().findById(reserveCancelled.get???()).ifPresent(carMgmt->{
-            
-            carMgmt // do something
-            repository().save(carMgmt);
 
-
+        /** Example 2:  finding and process 
+        
+        repository().findByCarId(reserveCancelled.getCarId()).forEach(carMgmt->{
+            // carMgmt // do something
+            CarMgmt carMgmt = new CarMgmt();
+            carMgmt.setCarId(reserveCancelled.getCarId());
+            carMgmt.setStatus(true);
+            System.out.println(
+                "\n\n##### listener CarStatusChange reserveCancelled : " + carMgmt + "\n\n"
+            );
+    
+            repository().update(carMgmt);
          });
-        */
+         */
 
     }
 }

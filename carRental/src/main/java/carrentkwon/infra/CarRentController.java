@@ -19,7 +19,7 @@ public class CarRentController {
     CarRentRepository carRentRepository;
 
     @RequestMapping(
-        value = "carRents/{id}/reservecancel",
+        value = "carrents/{id}/reservecancel",
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )
@@ -40,7 +40,7 @@ public class CarRentController {
     }
 
     @RequestMapping(
-        value = "carRents/{id}/returnCar",
+        value = "carrents/{id}/returnCar",
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )
@@ -61,7 +61,7 @@ public class CarRentController {
     }
 
     @RequestMapping(
-        value = "carRents/{id}/rent",
+        value = "carrents/{id}/rent",
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )
