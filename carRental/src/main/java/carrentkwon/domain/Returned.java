@@ -11,6 +11,7 @@ public class Returned extends AbstractEvent {
 
     private Long rentId;
     private String rentStatus;
+    private Long carId;
 
     public Returned(CarRent aggregate) {
         super(aggregate);

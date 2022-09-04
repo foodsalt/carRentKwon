@@ -19,8 +19,8 @@ public class CarRentHateoasProcessor
         );
         model.add(
             Link
-                .of(model.getRequiredLink("self").getHref() + "/return")
-                .withRel("return")
+                .of(model.getRequiredLink("self").getHref() + "/returnCar")
+                .withRel("returnCar")
         );
         model.add(
             Link
