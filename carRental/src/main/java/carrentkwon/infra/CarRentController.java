@@ -40,7 +40,7 @@ public class CarRentController {
     }
 
     @RequestMapping(
-        value = "carRents/{id}/return",
+        value = "carRents/{id}/returnCar",
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )
