@@ -11,10 +11,10 @@ import lombok.Data;
 @Data
 public class Payment {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long payId;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long rentId;
 
     private Double rentCost;
