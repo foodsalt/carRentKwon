@@ -69,8 +69,8 @@
             
             me.newValue = {
                 'rentId': 0,
-                'carId': '',
-                'userId': '',
+                'carId': 0,
+                'userId': 0,
                 'rentStartDate': '2022-09-04',
                 'rentEndDate': '2022-09-04',
                 'regDate': '2022-09-04',
