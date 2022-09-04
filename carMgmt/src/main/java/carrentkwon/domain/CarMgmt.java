@@ -47,20 +47,26 @@ public class CarMgmt {
     public static void carStatusChange(Reserved reserved) {
         /** Example 1:  new item 
         CarMgmt carMgmt = new CarMgmt();
+        carMgmt.setCarId(reserved.getCarId());
         repository().save(carMgmt);
 
         */
 
-        /** Example 2:  finding and process
+        /** Example 2:  finding and process */
         
-        repository().findById(reserved.get???()).ifPresent(carMgmt->{
-            
-            carMgmt // do something
-            repository().save(carMgmt);
+        repository().findByCarId(reserved.getCarId()).forEach(carMgmt->{
+            // carMgmt // do something
+            CarMgmt carMgmt = new CarMgmt();
+            carMgmt.setStatus(false);
+            System.out.println(
+                "\n\n##### listener CarStatusChange : " + carMgmt + "\n\n"
+            );
+    
+            repository().update(carMgmt);
 
 
          });
-        */
+       
 
     }
 

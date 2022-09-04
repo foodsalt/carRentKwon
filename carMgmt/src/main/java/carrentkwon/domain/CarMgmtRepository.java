@@ -6,4 +6,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "carMgmts", path = "carMgmts")
 public interface CarMgmtRepository
-    extends PagingAndSortingRepository<CarMgmt, Long> {}
+    extends PagingAndSortingRepository<CarMgmt, Long> {
+
+    Object findByCarId(Long carId);}
