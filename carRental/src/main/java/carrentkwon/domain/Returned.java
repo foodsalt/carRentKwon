@@ -10,7 +10,7 @@ import lombok.*;
 public class Returned extends AbstractEvent {
 
     private Long rentId;
-    private String rentStatus;
+    private String status;
     private Long carId;
 
     public Returned(CarRent aggregate) {
