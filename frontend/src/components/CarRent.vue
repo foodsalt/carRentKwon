@@ -23,6 +23,7 @@
             <Date label="RentStartDate" v-model="value.rentStartDate" :editMode="editMode"/>
             <Date label="RentEndDate" v-model="value.rentEndDate" :editMode="editMode"/>
             <Date label="RegDate" v-model="value.regDate" :editMode="editMode"/>
+            <String label="Status" v-model="value.status" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

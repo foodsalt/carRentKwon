@@ -22,7 +22,7 @@
             <String label="Type" v-model="value.type" :editMode="editMode"/>
             <Date label="RegStartDate" v-model="value.regStartDate" :editMode="editMode"/>
             <Date label="RegEndDate" v-model="value.regEndDate" :editMode="editMode"/>
-            <Boolean label="Status" v-model="value.status" :editMode="editMode"/>
+            <String label="Status" v-model="value.status" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
