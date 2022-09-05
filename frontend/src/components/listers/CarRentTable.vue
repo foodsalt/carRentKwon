@@ -72,6 +72,7 @@
                     { text: "rentStartDate", value: "rentStartDate" },
                     { text: "rentEndDate", value: "rentEndDate" },
                     { text: "regDate", value: "regDate" },
+                    { text: "status", value: "status" },
                 ],
             carRent : [],
             newValue: {},
@@ -92,9 +93,10 @@
                 'rentId': 0,
                 'carId': 0,
                 'userId': 0,
-                'rentStartDate': '2022-09-04',
-                'rentEndDate': '2022-09-04',
-                'regDate': '2022-09-04',
+                'rentStartDate': '2022-09-05',
+                'rentEndDate': '2022-09-05',
+                'regDate': '2022-09-05',
+                'status': '',
             }
         },
         methods: {
