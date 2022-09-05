@@ -51,13 +51,21 @@ public class MemberMgmt {
     }
 
     public static void mileageUpdate(Reserved reserved) {
-        /** Example 1:  new item 
+        /** Example 1:  new item */
         MemberMgmt memberMgmt = new MemberMgmt();
+        memberMgmt.setUserId(reserved.getUserId());
+        System.out.println(
+            "\n\n##### listener memberMgmt : " + memberMgmt + "\n\n"
+        );
         repository().save(memberMgmt);
 
         MileageUpdated mileageUpdated = new MileageUpdated(memberMgmt);
+        mileageUpdated.setUserId(reserved.getUserId());
+        System.out.println(
+            "\n\n##### listener mileageUpdated : " + mileageUpdated + "\n\n"
+        );
         mileageUpdated.publishAfterCommit();
-        */
+        
 
         /** Example 2:  finding and process
         

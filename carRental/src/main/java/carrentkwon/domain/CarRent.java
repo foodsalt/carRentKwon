@@ -38,6 +38,8 @@ public class CarRent {
             .pay(payment);
 
         Reserved reserved = new Reserved(this);
+        
+        // setStatus("RESERVECANCELED");
         reserved.publishAfterCommit();
     }
 
